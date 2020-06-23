@@ -31,7 +31,7 @@ public class ReadCSV {
 						System.out.println("");
 					}
 					numColumns++;
-                }
+                		}
             }
             leser.close();
         } catch (FileNotFoundException e) {
