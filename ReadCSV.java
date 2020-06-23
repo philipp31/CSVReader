@@ -32,9 +32,9 @@ public class ReadCSV {
 					}
 					numColumns++;
                 		}
-            }
-            leser.close();
-        } catch (FileNotFoundException e) {
+            		}
+           		leser.close();
+        	} catch (FileNotFoundException e) {
             e.printStackTrace();	
         }
     }
