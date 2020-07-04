@@ -9,7 +9,7 @@ public class ReadCSV {
 		
 		Scanner leser;
 		try {
-            		leser = new Scanner(new File("C:/Users/philipp/Desktop/csv.txt"));	// scanner needs input, in this case file obj
+            		leser = new Scanner(new File("C:/Users/philipp/Desktop/csv.csv"));	// scanner needs input, in this case file obj
 			leser.useDelimiter(",");	// for csv-format the delimiter comma is needed
            		int i;
             		double d;
@@ -18,11 +18,9 @@ public class ReadCSV {
                 		if (leser.hasNextInt()) {
                    			 i = leser.nextInt();
                     			System.out.println("Int: " + i);
-					numColumns++;
                		 	} else if (leser.hasNextDouble()) {
                     			d = leser.nextDouble();
                     			System.out.println("Double: " + d );
-					numColumns++;
                			 } else {
 				//throwing new line and carriage return away if new line begins:
 					char[] k = leser.next().toCharArray();	
@@ -30,7 +28,6 @@ public class ReadCSV {
 						System.out.print("Int: " + k[h]);
 						System.out.println("");
 					}
-					numColumns++;
                 		}
             		}
            		leser.close();
